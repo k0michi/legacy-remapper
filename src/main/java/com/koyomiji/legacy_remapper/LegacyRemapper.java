@@ -45,6 +45,7 @@ public class LegacyRemapper {
   static PipelineBuilder pipelineBuilder = new PipelineBuilder();
   static ClassIndex indexIn;
   static ClassIndex indexOut;
+  static boolean verbose;
 
   static void printHelp() {
     formatter.printHelp("LegacyRemapper [JAR_FILE]", options);
@@ -125,11 +126,15 @@ public class LegacyRemapper {
                           .desc("Destination path of remapped jar")
                           .build());
     options.addOption(Option.builder("j")
-                          .longOpt("index-out")
-                          .argName("path")
-                          .hasArg()
-                          .desc("Destination path of class index")
-                          .build());
+            .longOpt("index-out")
+            .argName("path")
+            .hasArg()
+            .desc("Destination path of class index")
+            .build());
+    options.addOption(Option.builder("v")
+            .longOpt("verbose")
+            .desc("Enable verbose logging")
+            .build());
     CommandLine line;
 
     try {
@@ -174,6 +179,7 @@ public class LegacyRemapper {
     configPaths = pathsOf(line.getOptionValues("config"));
     indexInPath = pathOf(line.getOptionValue("index-in"));
     indexOutPath = pathOf(line.getOptionValue("index-out"));
+    verbose = line.hasOption("verbose");
 
     String outPathString = line.getOptionValue("out");
 
@@ -313,6 +319,10 @@ public class LegacyRemapper {
               ClassInfoExtractor cne = new ClassInfoExtractor(w);
               Pipeline pipeline = pipelineBuilder.build(cne);
 
+              if (verbose) {
+                System.out.println(String.format("Remapping %s", e));
+              }
+
               try (InputStream is = jarFileSystem.newInputStream(e)) {
                 ClassReader reader = new ClassReader(is);
                 reader.accept(pipeline, 0);
@@ -331,15 +341,18 @@ public class LegacyRemapper {
                 os.write(newBytes);
               }
             } else {
-              String outPath = e;
-              String parent = PathUtils.getParentPath(outPath);
+              String parent = PathUtils.getParentPath(e);
 
               if (parent != null) {
                 wofs.createDirectories(parent);
               }
 
+              if (verbose) {
+                System.out.println(String.format("Copying %s", e));
+              }
+
               try (InputStream is = jarFileSystem.newInputStream(e);
-                   OutputStream os = wofs.newOutputStream(outPath)) {
+                   OutputStream os = wofs.newOutputStream(e)) {
                 os.write(is.readAllBytes());
               }
             }
