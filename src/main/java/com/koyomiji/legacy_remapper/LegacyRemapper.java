@@ -180,7 +180,7 @@ public class LegacyRemapper {
     if (outPathString != null) {
       outPath = Path.of(outPathString);
     } else {
-      outPath = jarPath.getParent().resolve(PathUtils.appendBeforeExtension(
+      outPath = jarPath.resolveSibling(PathUtils.appendBeforeExtension(
           jarPath.getFileName().toString(),
           "." + mappingTo.name().toLowerCase()));
     }
@@ -189,7 +189,7 @@ public class LegacyRemapper {
       pipelineBuilder.setSeargeClassIndexOut(indexOut = new ClassIndex());
 
       if (indexOutPath == null) {
-        indexOutPath = outPath.getParent().resolve(PathUtils.changeExtension(
+        indexOutPath = outPath.resolveSibling(PathUtils.changeExtension(
             jarPath.getFileName().toString(), ".index.json"));
       }
     }
