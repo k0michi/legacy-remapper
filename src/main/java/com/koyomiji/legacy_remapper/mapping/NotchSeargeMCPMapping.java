@@ -1,4 +1,4 @@
-package com.koyomiji.legacy_remapper.mappings;
+package com.koyomiji.legacy_remapper.mapping;
 
 import com.koyomiji.legacy_remapper.FieldIdentifier;
 import com.koyomiji.legacy_remapper.MethodIdentifier;

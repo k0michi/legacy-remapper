@@ -1,8 +1,8 @@
-package com.koyomiji.legacy_remapper.remappers;
+package com.koyomiji.legacy_remapper.remapper;
 
 import com.koyomiji.legacy_remapper.ILocalVariableRemapper;
 import com.koyomiji.legacy_remapper.Side;
-import com.koyomiji.legacy_remapper.mappings.SeargeMCPMapping;
+import com.koyomiji.legacy_remapper.mapping.SeargeMCPMapping;
 import java.util.HashMap;
 import java.util.Map;
 import org.objectweb.asm.commons.Remapper;

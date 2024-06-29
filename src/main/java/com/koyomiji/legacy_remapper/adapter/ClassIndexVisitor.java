@@ -1,4 +1,4 @@
-package com.koyomiji.legacy_remapper.adapters;
+package com.koyomiji.legacy_remapper.adapter;
 
 import com.koyomiji.legacy_remapper.ClassIndex;
 import org.objectweb.asm.ClassVisitor;

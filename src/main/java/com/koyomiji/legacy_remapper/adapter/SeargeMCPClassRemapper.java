@@ -1,6 +1,6 @@
-package com.koyomiji.legacy_remapper.adapters;
+package com.koyomiji.legacy_remapper.adapter;
 
-import com.koyomiji.legacy_remapper.remappers.SeargeMCPRemapper;
+import com.koyomiji.legacy_remapper.remapper.SeargeMCPRemapper;
 import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.Label;
 import org.objectweb.asm.MethodVisitor;

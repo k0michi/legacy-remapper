@@ -1,10 +1,10 @@
-package com.koyomiji.legacy_remapper.remappers;
+package com.koyomiji.legacy_remapper.remapper;
 
 import com.koyomiji.legacy_remapper.ClassIndex;
 import com.koyomiji.legacy_remapper.FieldIdentifier;
 import com.koyomiji.legacy_remapper.MethodIdentifier;
 import com.koyomiji.legacy_remapper.Side;
-import com.koyomiji.legacy_remapper.mappings.NotchSeargeMapping;
+import com.koyomiji.legacy_remapper.mapping.NotchSeargeMapping;
 import com.koyomiji.legacy_remapper.util.ObjectUtils;
 import java.util.HashMap;
 import java.util.Map;

@@ -1,10 +1,10 @@
-package com.koyomiji.legacy_remapper.remappers;
+package com.koyomiji.legacy_remapper.remapper;
 
 import com.koyomiji.legacy_remapper.Access;
 import com.koyomiji.legacy_remapper.MethodIdentifier;
 import com.koyomiji.legacy_remapper.Side;
 import com.koyomiji.legacy_remapper.SidedMethodIdentifier;
-import com.koyomiji.legacy_remapper.mappings.SeargeExceptor;
+import com.koyomiji.legacy_remapper.mapping.SeargeExceptor;
 import java.util.List;
 
 public class SeargeExceptorAccessor {

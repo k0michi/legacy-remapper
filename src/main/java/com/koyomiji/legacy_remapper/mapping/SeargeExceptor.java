@@ -1,4 +1,4 @@
-package com.koyomiji.legacy_remapper.mappings;
+package com.koyomiji.legacy_remapper.mapping;
 
 import com.google.gson.*;
 import com.google.gson.reflect.TypeToken;

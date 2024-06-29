@@ -1,8 +1,8 @@
 package com.koyomiji.legacy_remapper.test;
 
 import com.koyomiji.legacy_remapper.Side;
-import com.koyomiji.legacy_remapper.mappings.SeargeMCPMapping;
-import com.koyomiji.legacy_remapper.remappers.SeargeMCPRemapper;
+import com.koyomiji.legacy_remapper.mapping.SeargeMCPMapping;
+import com.koyomiji.legacy_remapper.remapper.SeargeMCPRemapper;
 import java.util.List;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

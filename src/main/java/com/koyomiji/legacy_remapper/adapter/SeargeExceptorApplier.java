@@ -1,8 +1,8 @@
-package com.koyomiji.legacy_remapper.adapters;
+package com.koyomiji.legacy_remapper.adapter;
 
 import com.koyomiji.legacy_remapper.*;
-import com.koyomiji.legacy_remapper.mappings.SeargeExceptor;
-import com.koyomiji.legacy_remapper.remappers.SeargeExceptorAccessor;
+import com.koyomiji.legacy_remapper.mapping.SeargeExceptor;
+import com.koyomiji.legacy_remapper.remapper.SeargeExceptorAccessor;
 import com.koyomiji.legacy_remapper.util.TypeUtils;
 import java.util.*;
 import org.objectweb.asm.*;

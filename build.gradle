@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.koyomiji'
-version = '0.1.0'
+version = '0.1.1'
 
 repositories {
     mavenCentral()
@@ -28,3 +28,9 @@ test {
 }
 
 sourceCompatibility = targetCompatibility = 1.11
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.koyomiji.legacy_remapper.LegacyRemapper'
+    }
+}

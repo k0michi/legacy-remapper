@@ -1,7 +1,7 @@
-package com.koyomiji.legacy_remapper.remappers;
+package com.koyomiji.legacy_remapper.remapper;
 
 import com.koyomiji.legacy_remapper.Side;
-import com.koyomiji.legacy_remapper.mappings.NotchSeargeMapping;
+import com.koyomiji.legacy_remapper.mapping.NotchSeargeMapping;
 import java.util.HashMap;
 import java.util.Map;
 import org.objectweb.asm.commons.Remapper;

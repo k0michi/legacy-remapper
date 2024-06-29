@@ -1,6 +1,6 @@
-package com.koyomiji.legacy_remapper.adapters;
+package com.koyomiji.legacy_remapper.adapter;
 
-import com.koyomiji.legacy_remapper.remappers.NotchSeargeRemapper;
+import com.koyomiji.legacy_remapper.remapper.NotchSeargeRemapper;
 import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.commons.ClassRemapper;
 

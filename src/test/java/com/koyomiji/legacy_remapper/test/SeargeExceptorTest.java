@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import com.koyomiji.legacy_remapper.Access;
 import com.koyomiji.legacy_remapper.Side;
 import com.koyomiji.legacy_remapper.SidedMethodIdentifier;
-import com.koyomiji.legacy_remapper.mappings.SeargeExceptor;
+import com.koyomiji.legacy_remapper.mapping.SeargeExceptor;
 import java.io.IOException;
 import java.util.List;
 import java.util.Optional;

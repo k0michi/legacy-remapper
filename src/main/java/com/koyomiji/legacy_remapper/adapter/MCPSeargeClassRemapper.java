@@ -1,6 +1,6 @@
-package com.koyomiji.legacy_remapper.adapters;
+package com.koyomiji.legacy_remapper.adapter;
 
-import com.koyomiji.legacy_remapper.remappers.MCPSeargeRemapper;
+import com.koyomiji.legacy_remapper.remapper.MCPSeargeRemapper;
 import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.commons.ClassRemapper;
 

@@ -1,8 +1,8 @@
 package com.koyomiji.legacy_remapper;
 
-import com.koyomiji.legacy_remapper.mappings.NotchSeargeMapping;
-import com.koyomiji.legacy_remapper.mappings.SeargeExceptor;
-import com.koyomiji.legacy_remapper.mappings.SeargeMCPMapping;
+import com.koyomiji.legacy_remapper.mapping.NotchSeargeMapping;
+import com.koyomiji.legacy_remapper.mapping.SeargeExceptor;
+import com.koyomiji.legacy_remapper.mapping.SeargeMCPMapping;
 import java.util.Objects;
 
 public class Config {

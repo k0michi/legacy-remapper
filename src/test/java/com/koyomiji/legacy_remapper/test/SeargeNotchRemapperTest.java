@@ -1,8 +1,8 @@
 package com.koyomiji.legacy_remapper.test;
 
 import com.koyomiji.legacy_remapper.Side;
-import com.koyomiji.legacy_remapper.mappings.NotchSeargeMapping;
-import com.koyomiji.legacy_remapper.remappers.SeargeNotchRemapper;
+import com.koyomiji.legacy_remapper.mapping.NotchSeargeMapping;
+import com.koyomiji.legacy_remapper.remapper.SeargeNotchRemapper;
 import java.util.List;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

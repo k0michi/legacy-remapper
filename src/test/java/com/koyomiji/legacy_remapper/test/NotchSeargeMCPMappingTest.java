@@ -3,7 +3,7 @@ package com.koyomiji.legacy_remapper.test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.koyomiji.legacy_remapper.Side;
-import com.koyomiji.legacy_remapper.mappings.NotchSeargeMCPMapping;
+import com.koyomiji.legacy_remapper.mapping.NotchSeargeMCPMapping;
 import java.io.IOException;
 import org.junit.jupiter.api.Test;
 

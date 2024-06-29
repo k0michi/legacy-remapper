@@ -1,7 +1,7 @@
 package com.koyomiji.legacy_remapper;
 
-import com.koyomiji.legacy_remapper.adapters.ClassIndexVisitor;
-import com.koyomiji.legacy_remapper.adapters.ClassInfoExtractor;
+import com.koyomiji.legacy_remapper.adapter.ClassIndexVisitor;
+import com.koyomiji.legacy_remapper.adapter.ClassInfoExtractor;
 import com.koyomiji.legacy_remapper.fs.*;
 import com.koyomiji.legacy_remapper.tuple.Pair;
 import com.koyomiji.legacy_remapper.util.ClassUtils;
@@ -94,7 +94,7 @@ public class LegacyRemapper {
             .longOpt("config")
             .argName("path")
             .hasArg()
-            .desc("Path to MCP Config archive or directory to use")
+            .desc("Path of MCP Config archive or directory to use")
             .build());
     options.addOption(
         Option.builder("f")

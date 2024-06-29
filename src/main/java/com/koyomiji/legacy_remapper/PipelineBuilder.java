@@ -1,10 +1,10 @@
 package com.koyomiji.legacy_remapper;
 
-import com.koyomiji.legacy_remapper.adapters.*;
-import com.koyomiji.legacy_remapper.mappings.NotchSeargeMapping;
-import com.koyomiji.legacy_remapper.mappings.SeargeExceptor;
-import com.koyomiji.legacy_remapper.mappings.SeargeMCPMapping;
-import com.koyomiji.legacy_remapper.remappers.*;
+import com.koyomiji.legacy_remapper.adapter.*;
+import com.koyomiji.legacy_remapper.mapping.NotchSeargeMapping;
+import com.koyomiji.legacy_remapper.mapping.SeargeExceptor;
+import com.koyomiji.legacy_remapper.mapping.SeargeMCPMapping;
+import com.koyomiji.legacy_remapper.remapper.*;
 import org.objectweb.asm.ClassVisitor;
 
 public class PipelineBuilder {
