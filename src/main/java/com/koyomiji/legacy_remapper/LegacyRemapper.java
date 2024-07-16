@@ -5,6 +5,7 @@ import com.koyomiji.legacy_remapper.adapter.ClassInfoExtractor;
 import com.koyomiji.legacy_remapper.fs.*;
 import com.koyomiji.legacy_remapper.tuple.Pair;
 import com.koyomiji.legacy_remapper.util.ClassUtils;
+import com.koyomiji.legacy_remapper.util.NIOPathUtils;
 import com.koyomiji.legacy_remapper.util.PathUtils;
 import java.io.IOException;
 import java.io.InputStream;
@@ -53,7 +54,7 @@ public class LegacyRemapper {
 
   private static Path pathOf(String string) {
     if (string != null) {
-      return Path.of(string);
+      return NIOPathUtils.of(string);
     }
 
     return null;
@@ -63,7 +64,7 @@ public class LegacyRemapper {
     ArrayList<Path> paths = new ArrayList<>();
 
     for (String string : strings) {
-      paths.add(Path.of(string));
+      paths.add(NIOPathUtils.of(string));
     }
 
     return paths;
@@ -153,7 +154,7 @@ public class LegacyRemapper {
       throw new UsageException();
     }
 
-    jarPath = Path.of(jarPaths[0]);
+    jarPath = NIOPathUtils.of(jarPaths[0]);
 
     try {
       jarFile = new JarFile(jarPath.toFile());
@@ -184,7 +185,7 @@ public class LegacyRemapper {
     String outPathString = line.getOptionValue("out");
 
     if (outPathString != null) {
-      outPath = Path.of(outPathString);
+      outPath = NIOPathUtils.of(outPathString);
     } else {
       outPath = jarPath.resolveSibling(PathUtils.appendBeforeExtension(
           jarPath.getFileName().toString(),

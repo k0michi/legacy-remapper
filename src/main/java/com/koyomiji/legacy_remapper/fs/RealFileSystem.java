@@ -1,5 +1,7 @@
 package com.koyomiji.legacy_remapper.fs;
 
+import com.koyomiji.legacy_remapper.util.NIOPathUtils;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -73,14 +75,14 @@ public class RealFileSystem
   }
 
   public OutputStream newOutputStream(String path) throws IOException {
-    return Files.newOutputStream(Path.of(path));
+    return Files.newOutputStream(NIOPathUtils.of(path));
   }
 
   public String createDirectory(String path) throws IOException {
-    return Files.createDirectory(Path.of(path)).toString();
+    return Files.createDirectory(NIOPathUtils.of(path)).toString();
   }
 
   public String createDirectories(String path) throws IOException {
-    return Files.createDirectories(Path.of(path)).toString();
+    return Files.createDirectories(NIOPathUtils.of(path)).toString();
   }
 }

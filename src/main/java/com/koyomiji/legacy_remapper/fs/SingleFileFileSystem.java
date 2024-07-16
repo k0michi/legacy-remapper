@@ -1,5 +1,7 @@
 package com.koyomiji.legacy_remapper.fs;
 
+import com.koyomiji.legacy_remapper.util.NIOPathUtils;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
@@ -41,7 +43,7 @@ public class SingleFileFileSystem implements IReadOnlyFileSystem {
 
   public CloseableIterator<String> walk(String start) throws IOException {
     return new CloseableIterator<String>() {
-      boolean has = Path.of(start).normalize().equals(Path.of(""));
+      boolean has = NIOPathUtils.of(start).normalize().equals(NIOPathUtils.of(""));
 
       @Override
       public boolean hasNext() {
