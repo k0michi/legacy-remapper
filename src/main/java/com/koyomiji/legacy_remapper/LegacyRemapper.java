@@ -226,7 +226,7 @@ public class LegacyRemapper {
       } else {
         Optional<Pair<Path, String>> split = splitArchivePath(p);
 
-        if (split.isEmpty()) {
+        if (!split.isPresent()) {
           throw new ExplainedException(String.format("Could not find %s\n", p));
         }
 
