@@ -126,15 +126,15 @@ public class LegacyRemapper {
                           .desc("Destination path of remapped jar")
                           .build());
     options.addOption(Option.builder("j")
-            .longOpt("index-out")
-            .argName("path")
-            .hasArg()
-            .desc("Destination path of class index")
-            .build());
+                          .longOpt("index-out")
+                          .argName("path")
+                          .hasArg()
+                          .desc("Destination path of class index")
+                          .build());
     options.addOption(Option.builder("v")
-            .longOpt("verbose")
-            .desc("Enable verbose logging")
-            .build());
+                          .longOpt("verbose")
+                          .desc("Enable verbose logging")
+                          .build());
     CommandLine line;
 
     try {
