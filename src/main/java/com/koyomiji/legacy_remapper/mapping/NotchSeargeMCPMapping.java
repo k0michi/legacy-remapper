@@ -92,7 +92,7 @@ public class NotchSeargeMCPMapping {
         String toMethod = parts[3];
 
         if (generated) {
-          var mcp = notchMCPMethodMap.getOrDefault(
+          String mcp = notchMCPMethodMap.getOrDefault(
               new MethodIdentifier(fromClass, fromMethod, fromDesc), toMethod);
           methods.add(new MethodEntry(fromClass, fromMethod, fromDesc, toMethod,
                                       mcp, side));
@@ -112,7 +112,7 @@ public class NotchSeargeMCPMapping {
         String toField = parts[2];
 
         if (generated) {
-          var mcp = notchMCPFieldMap.getOrDefault(
+          String mcp = notchMCPFieldMap.getOrDefault(
               new FieldIdentifier(fromClass, fromField), toField);
           fields.add(new FieldEntry(fromClass, fromField, toField, mcp, side));
         } else {

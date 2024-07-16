@@ -10,6 +10,7 @@ import com.koyomiji.legacy_remapper.util.MapUtils;
 import com.koyomiji.legacy_remapper.util.StringUtils;
 import java.io.IOException;
 import java.io.Reader;
+import java.lang.reflect.Type;
 import java.util.*;
 
 public class SeargeExceptor {
@@ -179,7 +180,7 @@ public class SeargeExceptor {
             .registerTypeAdapter(ClassEntry.InnerClass.class,
                                  new ClassEntry.InnerClass.Deserializer())
             .create();
-    var type = new TypeToken<Map<String, ClassEntry>>() {}.getType();
+    Type type = new TypeToken<Map<String, ClassEntry>>() {}.getType();
 
     return gson.fromJson(reader, type);
   }
