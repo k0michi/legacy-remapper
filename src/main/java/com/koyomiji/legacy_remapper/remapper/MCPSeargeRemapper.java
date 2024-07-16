@@ -57,7 +57,7 @@ public class MCPSeargeRemapper extends Remapper {
 
   public SeargeMCPMapping getMapping() { return mapping; }
 
-  public ClassIndex getDeclarationMap() { return classIndex; }
+  public ClassIndex getClassIndex() { return classIndex; }
 
   @Override
   public String mapFieldName(String owner, String name, String descriptor) {

@@ -46,7 +46,7 @@ public class NotchSeargeRemapper extends Remapper {
 
   public NotchSeargeMapping getMapping() { return mapping; }
 
-  public ClassIndex getDeclarationMap() { return classIndex; }
+  public ClassIndex getClassIndex() { return classIndex; }
 
   public boolean containsClass(String notchClassName) {
     return classMap.containsKey(notchClassName);
